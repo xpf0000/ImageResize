@@ -1,7 +1,7 @@
 {
   "menu": [
     {
-      "role": "app",
+      "label": "应用",
       "id": "menu.app",
       "submenu": [
         { "id": "app.about", "label": "关于", "command": "application:about", "command-before": "application:show,index" },
@@ -16,7 +16,7 @@
       ]
     },
     {
-      "role": "window",
+      "label": "窗口",
       "id": "menu.window",
       "submenu": [
         { "id": "window.close", "role": "close", "label": "关闭" },
@@ -25,17 +25,6 @@
         { "id": "window.toggle-fullscreen", "role": "togglefullscreen", "label": "全屏切换" },
         { "type": "separator" },
         { "id": "window.front", "role": "front", "label": "窗口置顶" }
-      ]
-    },
-    {
-      "role": "help",
-      "id": "menu.help",
-      "submenu": [
-        { "id": "help.official-website", "role": "official-website", "command": "help:official-website" },
-        { "id": "help.manual", "role": "manual","command": "help:manual" },
-        { "id": "help.release-notes", "role": "release-notes","command": "help:release-notes" },
-        { "type": "separator" },
-        { "id": "help.report-problem", "role": "report-problem","command": "help:report-problem" }
       ]
     }
   ]

@@ -50,7 +50,7 @@
         </el-form-item>
         <el-form-item class="flex-1" label="转换文件">
           <el-table :data="files" height="100%" style="width: 100%">
-            <el-table-column prop="path" label="文件" />
+            <el-table-column prop="path" label="文件"></el-table-column>
             <el-table-column prop="run" label="状态" width="180">
               <template #default="scope">
                 <span
@@ -232,7 +232,7 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
-    padding: 12px;
+    padding: 0 12px 12px 12px;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -263,7 +263,7 @@
     .setting-wapper {
       flex: 1;
       overflow: hidden;
-      padding: 20px;
+      padding: 20px 20px 0 20px;
 
       .flex-shrink-0 {
         flex-shrink: 0;

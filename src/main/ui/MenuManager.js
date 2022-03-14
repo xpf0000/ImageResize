@@ -20,6 +20,7 @@ export default class MenuManager extends EventEmitter {
 
   load() {
     const platform = process.platform
+    console.log('platform: ', platform)
     let template = menuTmpl[platform]
     this.template = template['menu']
   }
@@ -33,6 +34,7 @@ export default class MenuManager extends EventEmitter {
     // Deepclone the menu template to refresh menu
     const template = JSON.parse(JSON.stringify(this.template))
     const tpl = translateTemplate(template, keystrokesByCommand)
+    console.log('tpl: ', tpl)
     return Menu.buildFromTemplate(tpl)
   }
 
