@@ -1,0 +1,13 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+/build/notarize.js
+/electron
+/release
+/icon.sh
+yarn.lock
+app-update.yml
+configs/publish.ts
+latest-mac.yml
