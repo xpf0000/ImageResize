@@ -60,6 +60,12 @@ yarn run build
 
 完成之后可以在项目的 `release` 目录看到编译打包好的应用文件
 
+### 问题反馈及建议
+
+提Issues, 或者扫码加QQ群
+
+![QQqun.png](http://mbimage.ybvips.com/electron/imageresize/QQqun.png)
+
 ## 🛠 技术栈
 
 - [Electron](https://electronjs.org/)
