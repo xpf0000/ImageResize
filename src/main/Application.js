@@ -57,6 +57,9 @@ export default class Application extends EventEmitter {
     })
     this.windowManager.on('window-closed', (data) => {
       this.storeWindowState(data)
+      if (is.windows()) {
+        this.emit('application:exit')
+      }
     })
   }
 
@@ -194,8 +197,10 @@ export default class Application extends EventEmitter {
     })
 
     this.on('application:exit', () => {
+      console.log('application:exit !!!!!!')
       this.stop()
       app.exit()
+      process.exit(0)
     })
 
     this.on('application:open-at-login', (openAtLogin) => {

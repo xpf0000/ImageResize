@@ -76,6 +76,7 @@ export default class Launcher extends EventEmitter {
 
   handelAppReady() {
     app.on('ready', () => {
+      console.log('app on ready !!!!!!')
       global.application = new Application()
       const { openedAtLogin } = this
       global.application.start('index', {
@@ -85,7 +86,9 @@ export default class Launcher extends EventEmitter {
     })
 
     app.on('activate', () => {
+      console.log('app on activate !!!!!!')
       if (global.application) {
+        console.log('global.application: ', global.application)
         logger.info('[WebMaker] activate')
         global.application.showPage('index')
       }

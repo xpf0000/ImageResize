@@ -2,14 +2,14 @@
   <div class="title-bar">
     <div class="title-bar-dragger"></div>
     <ul v-if="isWin" class="window-actions">
-      <li class="win-close-btn" @click="handleClose">
-        <yb-icon :svg="import('../../svg/close.svg?raw')" width="12" height="12" />
-      </li>
       <li @click="handleMinimize">
         <yb-icon :svg="import('../../svg/minimize.svg?raw')" width="12" height="12" />
       </li>
       <li @click="handleMaximize">
         <yb-icon :svg="import('../../svg/maximize.svg?raw')" width="12" height="12" />
+      </li>
+      <li class="win-close-btn" @click="handleClose">
+        <yb-icon :svg="import('../../svg/close.svg?raw')" width="12" height="12" />
       </li>
     </ul>
   </div>
@@ -61,7 +61,7 @@
       -webkit-user-select: none;
     }
     .window-actions {
-      opacity: 0.4;
+      opacity: 1.0;
       transition: $--fade-transition;
       list-style: none;
       padding: 0;
@@ -71,8 +71,9 @@
         display: inline-block;
         padding: 3px 8px;
         margin: 0;
-        color: $--titlebar-actions-color;
+        color: #fff;
         &:hover {
+          color: #1d2033;
           background-color: $--titlebar-actions-active-background;
         }
         &.win-close-btn:hover {

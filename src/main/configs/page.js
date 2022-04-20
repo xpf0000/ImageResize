@@ -5,10 +5,10 @@ export default {
   index: {
     attrs: {
       title: 'WebMaker',
-      width: 640,
-      height: 525,
+      width: 680,
+      height: 800,
       minWidth: 640,
-      minHeight: 525,
+      minHeight: 700,
       backgroundColor: '#262D3D',
       transparent: !is.windows()
     },

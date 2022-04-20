@@ -9,9 +9,10 @@
   "copyright": "Copyright© pengfei xu",
   "scripts": {
     "build-dev-runner": "cat scripts/args.esbuild.dev-runner | xargs npx esbuild",
-    "web": "yarn run build-dev-runner && NODE_ENV=development TEST=browser node electron/dev-runner.js",
-    "dev": "yarn run build-dev-runner && NODE_ENV=development TEST=electron node electron/dev-runner.js",
-    "build": "rm -rf dist/* && cat scripts/args.esbuild.app-builder | xargs npx esbuild && NODE_ENV=production node electron/app-builder.js"
+    "web": "yarn run build-dev-runner && cross-env NODE_ENV=development TEST=browser node electron/dev-runner.js",
+    "dev": "rm -rf dist/* && yarn run build-dev-runner && cross-env NODE_ENV=development TEST=electron node electron/dev-runner.js",
+    "clean": "rm -rf dist/*",
+    "build": "cat scripts/args.esbuild.app-builder | xargs npx esbuild && cross-env NODE_ENV=production node electron/app-builder.js"
   },
   "main": "./dist/electron/main.js",
   "optionalDependencies": {
