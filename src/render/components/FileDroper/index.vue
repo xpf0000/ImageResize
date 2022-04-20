@@ -71,7 +71,7 @@
         Promise.all(queue).then((parr) => {
           parr.forEach((plist) => {
             plist = plist.filter((p) => {
-              const ext = path.extname(p)
+              const ext = path.extname(p).toLowerCase()
               return FileExt.includes(ext)
             })
             const set = new Set(plist)

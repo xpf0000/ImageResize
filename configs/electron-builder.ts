@@ -3,7 +3,7 @@ import PublishConfig from './publish'
 
 const conf: Configuration = {
   productName: '图片尺寸调整',
-  buildVersion: '1.0.0',
+  buildVersion: '1.0.1',
   electronVersion: '16.0.7',
   appId: 'com.yibai.imageresize',
   asar: true,
